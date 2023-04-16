@@ -1,0 +1,67 @@
+.title {
+    font-family: 'Poppins', sans-serif;
+    align-self: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 70px;
+    text-transform: capitalize;
+    color: #18063C;
+}
+
+.mark {
+    z-index: 5;
+    position: relative;
+}
+
+.mark::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    right: 0;
+    left: 0;
+    top: 30px;
+    background: url('@img/Shape.png') 0 0 no-repeat;
+    background-size: 176px;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 6.5vw;
+        text-align: center;
+        line-height: 9vw;
+    }
+    .mark::after {
+        background-size: 106px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mark::after {
+        background-size: 106px;
+        top: 27px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .mark::after {
+        background-size: 106px;
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .mark::after {
+        background-size: 100px;
+        top: 17px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .title {
+        font-size: 7vw;
+        text-align: center;
+        line-height: 9vw;
+    }
+}

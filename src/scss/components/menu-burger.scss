@@ -1,0 +1,139 @@
+.menu {
+    display: flex;
+    &__button {
+        display: none;
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+        gap: 30px 50px;
+    }
+    &__imem-link {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #1C0E0D;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        &__button {
+            display: block;
+            border: none;
+            align-self: center;
+            padding: 0;
+            background: rgba(0, 0, 0, 0);
+            overflow: hidden;
+        }
+        &__button-span{
+            position: relative;
+            display: block;
+            width: 30px;
+            height: 24px;
+            cursor: pointer;
+        }
+        &__button-span::before,
+        &__button-span::after,
+        &__button-text-bar {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #FF553E;
+        }
+        &__button-span::before,
+        &__button-span::after {
+            content: "";
+            transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left
+        }
+        &__button-span::before {
+            top: 0;
+        }
+        &__button-span::after {
+            top: 10px;
+        }
+        &__button-text-bar {
+            top: 20px;
+        }
+        &__button-text-bar::before{
+            content: "MENU";
+            position: absolute;
+            top: 25px;
+            right: 0;
+            left: 0;
+            color: #FF553E;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        &_active {
+            .menu__button-span::before {
+                left: -30px;
+            }
+        }
+        &_active {
+            .menu__button-span::after {
+                left: 30px;
+            }
+        }
+        &_active {
+            .menu__button-span{
+                .menu__button-text-bar::before {
+                    animation: moveUpThenDown 0.8s ease 0.2s forwards,
+                        shakeWhileMovingUp 0.8s ease 0.2s forwards,
+                        shakeWhileMovingDown 0.2s ease 0.8s forwards;
+                }
+            }
+        }
+    }
+
+    @keyframes moveUpThenDown {
+        0% {
+            top: 0;
+        }
+        50% {
+            top: -20px;
+        }
+        100% {
+            top: -11px;
+        }
+    }
+
+    @keyframes shakeWhileMovingUp {
+        0% {
+            transform: rotateZ(0);
+        }
+        25% {
+            transform: rotateZ(-10deg);
+        }
+        50% {
+            transform: rotateZ(0deg);
+        }
+        75% {
+            transform: rotateZ(10deg);
+        }
+        100% {
+            transform: rotateZ(0);
+        }
+    }
+
+    @keyframes shakeWhileMovingDown {
+        0% {
+            transform: rotateZ(0);
+        }
+        80% {
+            transform: rotateZ(3deg);
+        }
+        90% {
+            transform: rotateZ(-3deg);
+        }
+        100% {
+            transform: rotateZ(0);
+        }
+    }
+}

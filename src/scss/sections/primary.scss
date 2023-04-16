@@ -1,0 +1,254 @@
+.primary {
+    background-color: #FFF8F2;
+    height: calc(100vh + 170px);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 124px;
+        right: 0;
+        width: 84px;
+        height: 134px;
+        background: url('@img/icons/icons.svg#Vector') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__container {
+        display: flex;
+        height: 100vh;
+        min-height: 650px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 104px;
+        align-items: center;
+        text-align: center;
+    }
+    &__container::before {
+        content: "";
+        position: absolute;
+        width: 410px;
+        height: 883px;
+        left: 0;
+        bottom: -70vh;
+        background: url('@img/Mobile Screen 1.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__container::after {
+        content: "";
+        position: absolute;
+        width: 410px;
+        height: 883px;
+        right: 0;
+        bottom: -70vh;
+        background: url('@img/Mobile Screen 2.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__title {
+        font-family: 'Poppins', sans-serif;
+        max-width: 720px;
+        margin: 0 auto;
+        z-index: 5;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 90px;
+        color: #1C0E0D;
+        position: relative;
+        background: url('@img/Shape.png') 0 0 no-repeat;
+        background-size: 176px;
+        background-position: left bottom;
+        left: 0;
+    }
+    &__title::before {
+        content: "";
+        position: absolute;
+        left: -270px;
+        top: -110px;
+        width: 121px;
+        height: 174px;
+        background: url('@img/icons/icons.svg#Vector_(2)') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__title::after {
+        content: "";
+        position: absolute;
+        left: -180px;
+        top: -70px;
+        width: 135px;
+        height: 157px;
+        background: url('@img/Alarm_Clock copy 2 (2).png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__subtitle {
+        font-family: 'Inter', sans-serif;
+        max-width: 600px;
+        margin: 25px auto 0;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 36px;
+        text-align: center;
+        color: #40201E;
+        opacity: 0.8;
+    }
+    &__subtitle::after {
+        content: "";
+        position: absolute;
+        width: 53px;
+        height: 62px;
+        bottom: 0;
+        left: 30%;
+        background: url('@img/icons/icons.svg#Vector_(11)') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__link {
+        background: #FF553E;
+        position: relative;
+        margin-top: 100px;
+        padding: 24px 40px;
+        min-width: 240px;
+        border-radius: 40px;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+    }
+    &__link::after {
+        content: "";
+        position: absolute;
+        width: 107px;
+        height: 119px;
+        top: 0;
+        right: -217px;
+        background: url('@img/icons/icons.svg#Vector_(4)') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__link::before {
+        content: "";
+        position: absolute;
+        z-index: 5;
+        width: 178px;
+        top: -150px;
+        height: 190px;
+        right: -310px;
+        background: url('@img/CLIPBOARD VERIFIED 1.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .primary {
+        &__container::before {
+            display: none;
+        }
+        &__container::after {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .primary {
+        &__title::before {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 1066px) {
+    .primary {
+        &__title::after {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .primary {
+        &__link::before {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .primary {
+        height: 90vh;
+        min-height: 550px;
+        position: relative;
+        &::before {
+            width: 46px;
+            height: 74px;
+        }
+        &__container {
+            height: 90vh;
+            min-height: 550px;
+            align-items: flex-start;
+        }
+        &__title {
+            font-size: 7vw;
+            margin-left: 0;
+            text-align: start;
+            line-height: 10vw;
+            background-size: 106px;
+        }
+        &__title::after {
+            display: block;
+            width: 65px;
+            height: 76px;
+            top: -40px;
+            left: auto;
+            right: 30px;
+        }
+        &__subtitle {
+            text-align: start;
+            margin-left: 0;
+        }
+        &__link {
+            margin-top: 40px;
+        }
+        &__link::after {
+            width: 66px;
+            height: 60px;
+            top: 0;
+            right: -100px;
+        }
+        &__subtitle::after  {
+            left: -10px;
+            z-index: -10;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .primary {
+        &__title {
+            max-width: 260px;
+            font-size: 28px;
+            line-height: 160%;
+            font-weight: 700;
+            text-transform: capitalize;
+            line-height: 160%;
+            background-position: center 65%;
+        }
+        &__title::after {
+            right: -10px;
+        }
+        &__subtitle {
+            font-size: 16px;
+            font-size: 16px;
+            line-height: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .primary {
+        &::before{
+            display: none;
+        }
+        &__link::after {
+            display: none;
+        }
+    }
+}

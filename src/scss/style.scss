@@ -1,0 +1,26 @@
+@import "fonts";
+@import "global";
+@import "reset";
+@import "vars";
+
+@import "sections/header";
+@import "sections/footer";
+@import "sections/primary";
+@import "sections/features";
+@import "sections/analytics";
+
+@import "components/menu-burger";
+@import "components/title";
+@import "components/subtitle";
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.body_lock{
+    overflow: hidden;
+}
+
+img {
+    object-fit: contain;
+}
