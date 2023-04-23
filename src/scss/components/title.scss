@@ -23,14 +23,13 @@
     left: 0;
     top: 30px;
     background: url('@img/Shape.png') 0 0 no-repeat;
-    background-size: 176px;
+    background-size: 150px;
 }
 
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 6.5vw;
-        text-align: center;
-        line-height: 9vw;
+        font-size: 5.8vw;
+        line-height: 8vw;
     }
     .mark::after {
         background-size: 106px;
@@ -61,7 +60,6 @@
 @media screen and (max-width: 321px) {
     .title {
         font-size: 7vw;
-        text-align: center;
         line-height: 9vw;
     }
 }

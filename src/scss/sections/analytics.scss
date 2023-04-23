@@ -2,11 +2,15 @@
     display: flex;
     justify-content: center;
     &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
         padding-top: 150px;
         margin: 0;
         max-width: 1570px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+    }
+    &__subtitle {
+        margin-top: 20px;
     }
     &__image {
         grid-row-end: span 3;
@@ -48,22 +52,75 @@
     }
 }
 
+@media screen and (max-width: 1230px) {
+    .analytics {
+        &__container {
+            padding-top: 100px;
+        }
+        &__image {
+            padding-right: 0px;
+            margin-left: -50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .analytics {
+        &__list {
+            gap: 25px;
+            flex-direction: inherit;
+            flex-wrap: wrap;
+        }
+        &__item-title {
+            font-size: 20px;
+            line-height: 120%;
+            margin-bottom: 8px;
+        }
+        &__item-text {
+            font-size: 16px;
+            line-height: 130%;
+        }
+        &__item-image {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .analytics {
         &__container {
+            grid-template-rows: 1fr;
+            justify-items: center;
         }
-        &__image {
+        &__title {
+            align-self: end !important;
+        }
+        &__subtitle {
+            align-self: start !important;
         }
         &__list {
+            grid-column: span 2;
+            grid-row: row 2;
+            width: 90%;
+            margin-top: 60px;
+            gap: 45px 25px;
         }
         &__list-item {
+            max-width: 280px;
         }
-        &__item-title {
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .analytics {
+        &__list {
+            width: 90%;
+            justify-content: center;
         }
-        &__item-text {
-        }
-        &__item-image {
+        &__list-item {
+            max-width: max-content;
         }
     }
 }
@@ -71,37 +128,53 @@
 @media screen and (max-width: 426px) {
     .analytics {
         &__container {
+            padding-top: 60px;
+            overflow: hidden;
+            grid-template-columns: 1fr;
+        }
+        &__title {
+            text-align: start;
+            margin-top: 40px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 180%;
         }
         &__image {
+            margin-left: -70px;
+            max-width: 130%;
         }
         &__list {
-        }
-        &__list-item {
+            grid-column: auto;
+            grid-row: auto;
+            justify-content: flex-start;
+            margin-top: 40px;
         }
         &__item-title {
+            font-size: 18px;
+            line-height: 120%;
+            margin-bottom: 10px;
         }
         &__item-text {
+            font-size: 14px;
+            line-height: 180%;
         }
         &__item-image {
+            width: 56px;
+            height: 56px;
         }
     }
 }
 
 @media screen and (max-width: 321px) {
     .analytics {
-        &__container {
+        &__title {
+            margin-top: 50px;
         }
         &__image {
-        }
-        &__list {
-        }
-        &__list-item {
-        }
-        &__item-title {
-        }
-        &__item-text {
-        }
-        &__item-image {
+            max-width: 135%;
+            padding: 0;
         }
     }
 }

@@ -73,6 +73,7 @@
     &__subtitle {
         padding-top: 20px;
         text-align: center;
+        line-height: 36px;
         padding-bottom: 65px;
     }
     &__list {
@@ -201,6 +202,7 @@
             display: none;
         }
         &__title {
+            text-align: center;
             position: relative;
         }
         &__title::after {
@@ -225,6 +227,7 @@
         }
         &__subtitle {
             font-size: 16px;
+            line-height: 36px;
         }
         &__actions-list {
             gap: 50px 180px;
