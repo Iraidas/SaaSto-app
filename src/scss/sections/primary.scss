@@ -113,6 +113,11 @@
         font-size: 18px;
         line-height: 28px;
         color: #FFFFFF;
+        &:hover {
+            @media ($device-hover) and ($device-pointer) {
+                cursor: pointer;
+            }
+        }
     }
     &__link::after {
         content: "";
@@ -123,6 +128,7 @@
         right: -217px;
         background: url('@img/icons/icons.svg#Vector_(4)') 0 0 no-repeat;
         background-size: contain;
+        cursor: default;
     }
     &__link::before {
         content: "";
@@ -134,6 +140,7 @@
         right: -310px;
         background: url('@img/CLIPBOARD VERIFIED 1.png') 0 0 no-repeat;
         background-size: contain;
+        cursor: default;
     }
 }
 

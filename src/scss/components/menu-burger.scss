@@ -17,6 +17,12 @@
         font-size: 18px;
         line-height: 24px;
         color: #1C0E0D;
+        &:hover {
+            @media ($device-hover) and ($device-pointer) {
+                color: $red;
+                cursor: pointer;
+            }
+        }
     }
 }
 
