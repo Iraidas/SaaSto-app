@@ -1,0 +1,292 @@
+.works {
+    background: #f8fefe;
+    padding: 140px 0;
+    overflow: hidden;
+    position: relative;
+    &__container {
+        max-width: 1400px;
+        padding-left: 100px;
+    }
+    &__container::before {
+        content: "";
+        position: absolute;
+        width: 383px;
+        height: 396px;
+        left: 0;
+        bottom: 380px;
+        background: url('@img/3D Image (1).png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__container::after {
+        content: "";
+        position: absolute;
+        width: 187px;
+        height: 352px;
+        right: 0;
+        top: 0;
+        background: url('@img/3D Image.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__caption {
+        margin-top: 30px;
+    }
+    &__statistics {
+        display: grid;
+        gap: 25px;
+        justify-items: end;
+        align-items: center;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__statistics-card {
+        min-width: 268px;
+    }
+    &__card-img {
+        height: min-content;
+        box-shadow: 0px 32px 54px rgba(65, 74, 85, 0.05);
+    }
+}
+
+.addition {
+    display: flex;
+    .list {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin-top: 75px;
+        margin-right: 50px;
+        gap: 80px;
+        .item {
+            display: flex;
+            position: relative;
+            &:nth-of-type(even) {
+                justify-content: end;
+                margin-left: auto;
+            }
+            &:nth-of-type(1) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50px;
+                    right: -30px;
+                    width: 89px;
+                    height: 125px;
+                    background: url('@img/icons/icons.svg#Vector_10') 0 0 no-repeat;
+                    background-size: contain;
+                }
+            }
+            &:nth-of-type(2) {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 100px;
+                    left: -120px;
+                    width: 89px;
+                    height: 125px;
+                    background: url('@img/icons/icons.svg#Vector_11') 0 0 no-repeat;
+                    background-size: contain;
+                }
+            }
+            &__title {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                font-size: 28px;
+                line-height: 52px;
+            }
+            &__caption {
+                white-space: nowrap;
+            }
+            &__img {
+                margin-right: 50px;
+                min-width: 56px;
+                min-height: 56px;
+                height: max-content;
+            }
+        }
+    }
+}
+
+.staticstics-card-1 {
+    align-self: end;
+}
+.staticstics-card-2 {
+    grid-row-end: span 3;
+}
+.staticstics-card-3 {
+    align-self: start;
+}
+
+
+@media screen and (max-width: 1670px) {
+    .works {
+        &__container::before {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .addition {
+        .list {
+            .item {
+                &:nth-of-type(1) {
+                    &::after {
+                        display: none;
+                    }
+                }
+                &:nth-of-type(2) {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .addition {
+        .list {
+            .item {
+                &__title {
+                    font-size: 2.2vw;
+                    line-height: 120%;
+                    margin-bottom: 10px;
+                }
+                &__caption {
+                    .caption {
+                        font-size: 1.5vw;
+                        line-height: 180%;
+                    }
+                }
+                &__img {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .works {
+        overflow:visible;
+        &__statistics {
+            justify-items: center;
+            margin-top: 30px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .addition {
+        .list {
+            .item {
+                &__caption {
+                    .caption {
+                        font-size: 1.7vw;
+                    }
+                }
+            }
+        }
+    }
+    .staticstics-card-2 {
+        order: -1;
+    }
+    .staticstics-card-3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .works {
+        &__container {
+            padding-left: 50px;
+        }
+        &__container::before {
+            content: "";
+            display: block;
+            width: 133px;
+            height: 184px;
+            left: auto;
+            right: 0;
+            top: -80px;
+            bottom: 380px;
+            background: url('@img/chart.png') 0 0 no-repeat;
+            background-size: contain;
+        }
+        &__container::after {
+            display: none;
+        }
+    }
+    .addition {
+        .list {
+            .item {
+                &__title {
+                    font-size: 18px;
+                }
+                &__caption {
+                    .caption {
+                        font-size: 14px;
+                    }
+                }
+                &__img {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .works {
+        padding: 90px 0;
+        &__container {
+            padding-left: 25px;
+        }
+    }
+    .addition {
+        flex-direction: column;
+        .list {
+            width: 75%;
+            margin-top: 75px;
+            gap: 45px;
+            margin: 50px auto;
+            .item {
+                &__img {
+                    margin-right: 20px;
+                    max-width: 80px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .addition {
+        .list {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .works {
+        padding: 50px 0;
+        &__title {
+            margin-right: 120px;
+        }
+        &__card-img {
+            max-width: 268px;
+        }
+    }
+    .addition {
+        .list {
+            width: 100%;
+            .item {
+                &:nth-of-type(even) {
+                    justify-content: left;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
