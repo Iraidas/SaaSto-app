@@ -1,0 +1,32 @@
+section.works 
+    .works__container.container 
+        h2.works__title.title How our <span class="mark">Tracker</span> work for you
+        p.works__caption.caption An enim nullam tempor sapien gravida donec enim ipsum porta justo  congue magna at pretium purus pretium ligula 
+        .works__addition.addition
+            - 
+                const items = [
+                    {
+                        title: 'Time Tracking',
+                        imageSrc: "@img/45-minutes.png",
+                        imageAlt: 'watch icon',
+                    },
+                    {
+                        title: 'Expenses',
+                        imageSrc: "@img/hourglass.png",
+                        imageAlt: 'hourglass icon',
+                    },
+                    {
+                        title: 'Budget controlling',
+                        imageSrc: "@img/wallet.png",
+                        imageAlt: 'wallet icon',
+                    }
+                ]
+            ul.addition__list.list
+                include ../components/list-item
+            .works__statistics
+                .works__statistics-card.staticstics-card-1
+                    img.works__card-img(src="@img/Kit 1 (2).png", alt="total earning", width="268", height="271")
+                .works__statistics-card.staticstics-card-2
+                    img.works__card-img(src="@img/Kit 3.png", alt="global statistics", width="388", height="445")
+                .works__statistics-card.staticstics-card-3
+                    img.works__card-img(src="@img/Kit 2 (1).png", alt="sales trend", width="231", height="321")
