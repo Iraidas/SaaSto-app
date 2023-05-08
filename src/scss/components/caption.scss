@@ -1,7 +1,7 @@
-.subtitle {
+.caption {
     max-width: 660px;
     align-self: center;
-    font-family: 'Inter' sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -11,12 +11,12 @@
 }
 
 @media screen and (max-width: 768px) {
-    .subtitle{
+    .caption {
     }
 }
 
 @media screen and (max-width: 426px) {
-    .subtitle {
+    .caption {
         font-size: 16px;
     }
 }
