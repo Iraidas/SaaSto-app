@@ -1,0 +1,219 @@
+.price {
+    padding: 140px 0 160px;
+    position: relative;
+    &__container {
+        align-items: center;
+        text-align: center;
+    }
+    &__container::before {
+        content: "";
+        position: absolute;
+        width: 333px;
+        height: 333px;
+        left: 0;
+        bottom: 150px;
+        background: url('@img/Hand.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__caption {
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    &__options {
+        .toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 65px;
+            gap: 0 20px;
+            &__caption {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+                color: #404040;
+            }
+            &__button {
+                display: flex;
+                border: none;
+                background-color:#ffddd8;
+                border-radius: 20px;
+                min-width: 84px;
+                padding: 6px;
+                outline: none;
+                transition: .4s;
+                &:hover {
+                    @media ($device-hover) and ($device-pointer) {
+                        cursor: pointer;
+                    }
+                }
+            }
+            &__circle {
+                height: 28px;
+                width: 28px;
+                border-radius: 50%;
+                background-color:#FF553E;
+                transition: .2s;
+            }
+            &_active {
+                .toggle__circle {
+                    transform: translateX(44px);
+                }
+            }
+        }
+    }
+    .cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        gap: 30px;
+        &::after {
+            content: "";
+            z-index: -10;
+            position: absolute;
+            width: 223px;
+            height: 296px;
+            right: -20px;
+            top: -95px;
+            background: url('@img/3D Icon.png') 0 0 no-repeat;
+            background-size: contain;
+        }
+        &__wrapper {
+            font-family: 'Inter', sans-serif;
+            border-radius: 110px;
+            padding: 65px 115px 75px;
+            border: 1px solid $red;
+            background: white;
+            max-width: 470px;
+        }
+        &__title {
+            font-weight: 600;
+            color: #404040;
+            font-size: 48px;
+            line-height: 100%;
+            text-align: center;
+            margin-bottom: 55px;
+        }
+        &__seat,
+        &__project {
+            font-weight: 600;
+            color: $red;
+            opacity: 0.8;
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 52px;
+        }
+        &__cost {
+            display: flex;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 65px;
+            margin-bottom: 70px;
+            color: #404040;
+            :last-child {
+                margin: 0;
+                align-self: flex-end;
+            }
+        }
+        &__link {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            white-space: nowrap;
+            font-size: 18px;
+            line-height: 28px;
+            border-radius: 40px;
+            padding: 25px 40px;
+            background: $red;
+            color: white;
+            &:hover {
+                @media ($device-hover) and ($device-pointer) {
+                    cursor: pointer;
+                    transform: scale(1.02, 1.02);
+                }
+            }
+        }
+        & > :nth-of-type(even) {
+            background: $red;
+            .cards__title,
+            .cards__seat,
+            .cards__project,
+            .cards__cost {
+                color: white;
+                opacity: 1;
+            }
+            .cards__link {
+                background: white;
+                color: $red;
+            }
+        }
+    }
+}
+
+.card {
+    &__cost {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100%;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .price {
+        &__container {
+        }
+        &__container::before {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1048px) {
+    .price {
+        .cards {
+            &::after {
+            }
+            &__wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            &__title {
+                width: 50%;
+                order: -2;
+                text-align: left;
+            }
+            &__seat,
+            &__project {
+                width: 51%;
+                text-align: left;
+            }
+            &__cost {
+                width: 43%;
+                margin: 0;
+                order: -1;
+                height: min-content;
+                :last-child {
+                    order: unset;
+                    width: auto;
+                }
+            }
+            &__link {
+            }
+            & > :nth-of-type(even) {
+                .cards__title,
+                .cards__seat,
+                .cards__project,
+                .cards__cost {
+                }
+                .cards__link {
+                }
+            }
+        }
+    }
+}
