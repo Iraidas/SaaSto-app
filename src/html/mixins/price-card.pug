@@ -1,9 +1,10 @@
 mixin card(title, seat, project, cost)
-    .cards__wrapper     
+    .cards__wrapper&attributes(attributes)
         h3.cards__title= title
         p.cards__seat= seat + ' seat'
         p.cards__project= project + ' preject'
         p.cards__cost $ 
             span.card__cost= cost
             span.cards__cost /Forever
-        a.cards__link(href="#") Start 14 Days Trial
+        .cards__link-container
+            a.cards__link(href="#") Start 14 Days Trial

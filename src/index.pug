@@ -1,14 +1,16 @@
 doctype html
 html(lang="en")
-    include html/head
+    head
+        include html/head
+        title SaaSto
     body
         include html/header
         main.main
-            include html/section/primary
-            include html/section/features
-            include html/section/analytics
-            include html/section/works
-            include html/section/price
+            include html/sections/primary
+            include html/sections/features
+            include html/sections/analytics
+            include html/sections/works
+            include html/sections/price
         include html/footer
         script(src='js/app.min.js')
 
