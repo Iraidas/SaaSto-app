@@ -83,6 +83,8 @@
             background-size: contain;
         }
         &__wrapper {
+            display: flex;
+            flex-direction: column;
             font-family: 'Inter', sans-serif;
             border-radius: 110px;
             padding: 65px 115px 75px;
@@ -174,8 +176,6 @@
 
 @media screen and (max-width: 1230px) {
     .price {
-        &__container {
-        }
         &__container::before {
             display: none;
         }
@@ -184,80 +184,19 @@
 
 @media screen and (max-width: 769px) {
     .price {
+        padding: 100px 0 60px;
         .cards {
             &::after {
+                display: none;
             }
-            &__wrapper {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                padding: 65px 75px 75px;
-                border-radius: 30px;
-                max-width: 620px;
-            }
-            &__title {
-                font-size: 20px;
-                line-height: 100%;
-                width: 50%;
-                order: -2;
-                text-align: left;
-            }
-            &__seat,
-            &__project {
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 20px;
-                width: 51%;
-                text-align: left;
-            }
-            &__cost {
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 28px;
-                width: 43%;
-                margin: 0;
-                order: -1;
-                height: min-content;
-                justify-content: flex-end;
-                :last-child {
-                    order: unset;
-                    width: auto;
-                }
-            }
-            &__link-container {
-                width: 100%;
-                margin-top: 55px;
-            }
-            &__link {
-            }
-            & > :nth-of-type(even) {
-                .cards__title,
-                .cards__seat,
-                .cards__project,
-                .cards__cost {
-                }
-                .cards__link {
-                }
-            }
-        }
-    }
-    .card {
-        &__cost {
-            font-weight: 700;
-            font-size: 28px;
         }
     }
 }
 
 @media screen and (max-width: 426px) {
     .price {
-        padding: 80px 0 160px;
-        &__container {
-        }
+        padding: 80px 0 40px;
         &__container::before {
-        }
-        &__title {
         }
         &__caption {
             margin-bottom: 20px;
@@ -286,45 +225,65 @@
             }
         }
         .cards {
-            &::after {
-            }
             &__wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                border-radius: 30px;
                 padding: 40px 25px 35px;
                 max-width: 327px;
             }
             &__title {
+                font-size: 20px;
+                line-height: 100%;
+                width: 50%;
+                order: -2;
+                text-align: left;
                 margin-bottom: 30px;
-            }
-            &__seat,
-            &__project {
-            }
-            &__cost {
-                :last-child {
-                }
             }
             &__link-container {
                 margin-top: 30px;
             }
-            &__link {
+            &__seat,
+            &__project {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;
+                width: 51%;
+                text-align: left;
+            }
+            &__cost {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+                width: 43%;
+                margin: 0;
+                order: -1;
+                height: min-content;
+                justify-content: flex-end;
+                :last-child {
+                    order: unset;
+                    width: auto;
+                }
             }
             & > :nth-of-type(even) {
-                .cards__title,
-                .cards__seat,
-                .cards__project,
-                .cards__cost {
-                }
                 .cards__seat,
                 .cards__project {
                     opacity: 0.8;
                     width: 80%;
                 }
-                .cards__link {
-                }
+            }
+            &__link-container {
+                width: 100%;
+                margin-top: 55px;
             }
         }
     }
     .card {
         &__cost {
+            font-weight: 700;
+            font-size: 28px;
         }
     }
 }
