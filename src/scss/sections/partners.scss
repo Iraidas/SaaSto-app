@@ -1,0 +1,185 @@
+.partners {
+    background: #F8FEFE;
+    padding: 120px 0 80px;
+    &__container {
+        display: flex;
+        gap: 100px;
+        padding-right: 200px;
+        max-width: 1520px;
+    }
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 438px;
+    }
+    .text-wrapper {
+        .title {
+            margin-bottom: 25px;
+            align-self: flex-start;
+        }
+    }
+    &__caption {
+        margin-bottom: 50px;
+    }
+    &__link-wrapper {
+        background: white;
+        border: 1px solid #FF553E;
+        border-radius: 40px;
+        padding: 24px 40px;
+        width: max-content;
+        &:hover {
+            @media ($device-hover) and ($device-pointer) {
+                cursor: pointer;
+                transform: scale(1.02, 1.02);
+            }
+        }
+    }
+    &__link {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FF553E;
+    }
+    .image-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 620px;
+        gap: 56px;
+        width: 62%;
+        order: -1;
+        &__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: contain;
+            padding: 28px;
+            width: 100%;
+            height: 100%;
+            min-width: 120px;
+            min-height: 120px;
+        }
+        &__left-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 54px;
+        }
+        &__right-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 54px;
+        }
+        &__img1 {
+            background: rgba(243, 83, 37, 0.1);
+            border-radius: 40px;
+            max-width: 240px;
+            max-height: 120px;
+        }
+        &__img2 {
+            margin-top: 76px;
+            background: rgba(51, 214, 100, 0.1);
+            border-radius: 48px;
+            max-width: 315px;
+            max-height: 204px;
+        }
+        &__img3 {
+            background: rgba(255, 186, 0, 0.1);
+            border-radius: 54px;
+            max-width: 358px;
+            max-height: 239px;
+        }
+        &__img4 {
+            background: rgba(66, 133, 244, 0.1);
+            border-radius: 54px;
+            max-width: 385px;
+            max-height: 243px;
+        }
+        &__img5 {
+            background: rgba(28, 96, 191, 0.1);
+            border-radius: 48px;
+            max-width: 240px;
+            max-height: 152px;
+        }
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .partners {
+        &__container {
+            padding-right: 15px;
+            max-width: 1340px;
+        }
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .partners {
+        &__container {
+            padding-right: 50px;
+            max-width: 1340px;
+        }
+    }
+}
+
+@media screen and (max-width: 867px) {
+    .partners {
+        padding: 80px 0;
+        &__container {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__text-wrapper {
+            max-width: 579px;
+        }
+        .image-group {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .partners {
+        &__container {
+            padding-right: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .partners {
+        &__container {
+            padding-right: 15px;
+            gap: 80px;
+        }
+        .image-group {
+            align-self: flex-start;
+            min-height: auto;
+            gap: 16px;
+            width: 65%;
+            height: 50%;
+            &__image {
+            }
+            &__left-column {
+                gap: 16px;
+            }
+            &__right-column {
+                gap: 16px;
+            }
+            &__img1 {
+            }
+            &__img2 {
+                margin-top: 0;
+            }
+            &__img3 {
+            }
+            &__img4 {
+            }
+            &__img5 {
+                display: none;
+            }
+        }
+    }
+}
