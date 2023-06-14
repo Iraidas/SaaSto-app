@@ -1,0 +1,197 @@
+.invite {
+    background: #FFF8F2;
+    overflow: hidden;
+    &__container {
+        display: grid;
+        padding-top: 100px;
+        grid-template-columns: repeat(2, 1fr);
+        max-height: 676px;
+        gap: 0 0px;
+    }
+    &__image {
+        grid-row: 1/ span 3;
+        grid-column: 2;
+        padding-left: 50px;
+        position: relative;
+    }
+    &__app-example {
+        height: 100%;
+        margin-bottom: -5px;
+    }
+    &__image::after {
+        content: "";
+        position: absolute;
+        width: 632px;
+        height: 218px;
+        bottom: 140px;
+        background: url('@img/Image 2.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    .title {
+        position: relative;
+        align-self: end;
+        z-index: 5;
+    }
+    &__title::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 280px;
+        left: -330px;
+        bottom: -10px;
+        z-index: -5;
+        background: url('@img/Image 1.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    .caption {
+        align-self: start;
+        padding-top: 20px;
+        width: 430px;
+        z-index: 5;
+    }
+    &__links-wrapper {
+        display: flex;
+        margin-top: -90px;
+        gap: 20px;
+    }
+    &__link:first-child {
+        display: block;
+        position: relative;
+        background-color: $red;
+        width: 180px;
+        height: 73px;
+        border-radius: 40px;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 25px;
+            top: 24px;
+            left: 40px;
+            background: url('@img/Group 10147.png') 0 0 no-repeat;
+            background-size: contain;
+        }
+        &:hover {
+            @media ($device-hover) and ($device-pointer) {
+                cursor: pointer;
+                transform: scale(1.02, 1.02);
+            }
+        }
+    }
+    &__link:last-child {
+        display: block;
+        border: 1px solid $red;
+        position: relative;
+        width: 195px;
+        height: 73px;
+        border-radius: 40px;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 115px;
+            height: 27px;
+            top: 24px;
+            left: 40px;
+            background: url('@img/Group 10150.png') 0 0 no-repeat;
+            background-size: contain;
+        }
+        &:hover {
+            @media ($device-hover) and ($device-pointer) {
+                cursor: pointer;
+                transform: scale(1.02, 1.02);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    .invite {
+        &__title::before {
+            display: none;
+        }
+        &__image::after {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .invite {
+        &__links-wrapper {
+            margin-top: -60px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .invite {
+        &__links-wrapper {
+            margin-top: -40px;
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .invite {
+        &__container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-height: max-content;
+        }
+        &__links-wrapper {
+            margin-top: 20px;
+        }
+        .title,
+        .caption {
+            display: flex;
+            align-self: center;
+        }
+        &__image {
+            padding-left: 0px;
+            padding-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .invite {
+        &__container {
+            padding-top: 50px;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            max-height: max-content;
+        }
+        &__links-wrapper {
+            margin-top: 30px;
+            flex-direction: column;
+        }
+        .title,
+        .caption {
+            display: flex;
+            align-self: flex-start;
+            width: auto;
+        }
+        &__app-example {
+            display: none;
+        }
+        &__image {
+            align-self: flex-end;
+        }
+        &__image::after {
+            display: block;
+            left: -100px;
+            width: 176px;
+            height: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .invite {
+        &__image::after {
+            left: -60px;
+        }
+    }
+}
