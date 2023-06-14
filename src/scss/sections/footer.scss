@@ -61,6 +61,24 @@
         }
     }
 }
+
+@media screen and (max-width: 445px) {
+    .footer {
+        &__container {
+            padding-top: 80px;
+        }
+        &__top {
+            flex-direction: column;
+        }
+        .menu {
+            &__list {
+                flex-wrap: nowrap;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 375px) {
     .footer {
         &__top {
@@ -70,20 +88,6 @@
         .menu {
             &__list {
                 flex-wrap: wrap;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 445px) {
-    .footer {
-        &__top {
-            flex-direction: column;
-        }
-        .menu {
-            &__list {
-                flex-wrap: nowrap;
-                flex-direction: column;
             }
         }
     }

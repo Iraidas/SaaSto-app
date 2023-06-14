@@ -158,10 +158,7 @@
     .invite {
         &__container {
             padding-top: 50px;
-            display: flex;
             align-items: start;
-            flex-direction: column;
-            max-height: max-content;
         }
         &__links-wrapper {
             margin-top: 30px;
@@ -169,7 +166,6 @@
         }
         .title,
         .caption {
-            display: flex;
             align-self: flex-start;
             width: auto;
         }
