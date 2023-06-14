@@ -128,7 +128,7 @@
     .partners {
         padding: 80px 0;
         &__container {
-            flex-direction: column;
+            flex-direction: column-reverse;
             align-items: center;
         }
         &__text-wrapper {
@@ -148,11 +148,15 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     .partners {
+        padding-top: 40px;
         &__container {
             padding-right: 15px;
-            gap: 80px;
+            gap: 40px;
+        }
+        &__caption {
+            margin-bottom: 25px;
         }
         .image-group {
             align-self: flex-start;
@@ -168,14 +172,16 @@
             &__right-column {
                 gap: 16px;
             }
-            &__img1 {
+            &__img1,
+            &__img2,
+            &__img3,
+            &__img4 {
+                max-width: 120px;
+                max-height: 120px;
+                border-radius: 15px;
             }
             &__img2 {
                 margin-top: 0;
-            }
-            &__img3 {
-            }
-            &__img4 {
             }
             &__img5 {
                 display: none;
