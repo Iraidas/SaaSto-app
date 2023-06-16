@@ -11,7 +11,6 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
 const slider = new Swiper('.swiper', {
-    loop: true,
     width: 900,
     slidesPerView: 1,
     centeredSlides: true,
@@ -21,4 +20,21 @@ const slider = new Swiper('.swiper', {
         el: '.swiper-pagination',
         clickable: true, 
     },
+    breakpoints: {
+        1000: {
+            width: 900,
+        },
+        800: {
+            width: 700,
+        },
+        600: {
+            width: 500,
+        },
+        440: {
+            width: 360,
+        },
+        280: {
+            width: 280,
+        }
+    }
 });
