@@ -1,0 +1,91 @@
+.reviews {
+    min-width: 0;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 170px;
+        padding-bottom: 100px;
+        overflow: hidden;
+    }
+    &__title,
+    &__caption {
+        text-align: center;
+    }
+    .review {
+        padding-top: 60px;
+        margin-right: 100px;
+        &__container {
+            max-width: 900px;
+            .swiper-pagination {
+                position: absolute;
+                bottom: 40px;
+                left: -53px;
+            }
+            .swiper-pagination-bullet {
+                height: 12px;
+                width: 12px;
+                background-color: $red;
+            }
+            .swiper-pagination-bullet-active {
+                width: 36px;
+                border-radius: 7px;
+            }
+        }
+        &__wrapper {
+        }
+        &__slide {
+        }
+        &__card {
+            display: grid;
+            gap: 0 50px;
+            grid-template-columns: 1fr 1.85fr;
+            max-width: 100%;;
+        }
+        &__picture {
+            padding-right: 50px;
+            grid-column: 1;
+            grid-row: 1/ 4 span;
+        }
+        &__caption {
+            padding-top: 70px;
+        }
+        &__name {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 24px;
+            color: #38363C;
+            padding-top: 35px;
+        }
+        &__position {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            color: #38363C;
+            opacity: 0.7;
+            padding-top: 20px;
+            position: relative;
+        }
+    }
+}
+
+.swiper-conteiner {
+
+
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+
+}
+
+
+
+
+

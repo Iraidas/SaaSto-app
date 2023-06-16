@@ -2,6 +2,7 @@
 @import "global";
 @import "reset";
 @import "vars";
+@import "vendor";
 
 @import "sections/header";
 @import "sections/footer";
@@ -11,6 +12,7 @@
 @import "sections/works";
 @import "sections/price";
 @import "sections/partners";
+@import "sections/reviews";
 @import "sections/invite";
 
 @import "components/menu-burger";
