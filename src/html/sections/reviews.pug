@@ -1,0 +1,25 @@
+section.reviews 
+    .reviews__container.container
+        h2.reviews__title.title What our <span class="mark">client s</span>ays
+        p.reviews__caption.caption Growth your business with using us
+        .review 
+            .review__container.swiper
+                .review__wrapper.swiper-wrapper
+                    include ../mixins/review-card
+                    +slide('Leading an organization is incredibly rewarding and equally humbling. Confidence and humility. Every success is built on lessons from mistakes made is incredibly rewarding', 
+                    'Mila McSabbu', 
+                    'Designer',
+                    '@img/Rounded rectangle.png')(class = "swiper-slide")
+                    +slide('Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatem nesciunt cumque. Magni, aliquam dolorum expedita, debitis reprehenderit culpa consequatur perferendis architecto sit unde maxime.', 
+                    'Lorem ipsum', 
+                    'Lorem',
+                    '@img/Rounded rectangle.png')(class = "swiper-slide")
+                    +slide('Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatem nesciunt cumque. Magni, aliquam dolorum expedita, debitis reprehenderit culpa consequatur perferendis architecto sit unde maxime.', 
+                    'Lorem ipsum', 
+                    'Lorem',
+                    '@img/Rounded rectangle.png')(class = "swiper-slide")
+                    +slide('Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatem nesciunt cumque. Magni, aliquam dolorum expedita, debitis reprehenderit culpa consequatur perferendis architecto sit unde maxime.', 
+                    'Lorem ipsum', 
+                    'Lorem',
+                    '@img/Rounded rectangle.png')(class = "swiper-slide")
+                .swiper-pagination
