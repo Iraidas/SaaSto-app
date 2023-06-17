@@ -8,7 +8,7 @@ section.price
                 button.toggle__button
                     .toggle__circle
                 p.toggle__caption Yearly
-            .price__options-cards.cards 
+            .price__options-cards.cards.card
                 include ../mixins/price-card
                 +card('Free', '1', '2', '0')(class = "monthly-price")
                 +card('Premium', 'Unlimited', 'Unlimited', '30')(class = "monthly-price")
