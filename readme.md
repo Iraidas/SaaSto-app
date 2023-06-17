@@ -19,6 +19,6 @@
         </li>
     </ul>
     <h3>Показатели PageSpeed (хостинг GitHub Pages):</h3>
-    <img src="images/page-speed-mobile.jpg" alt="показатели PageSpeed для мобильных устройств" width="400">
-    <img src="images/page-speed-desktop.jpg" alt="показатели PageSpeed для компьютеров" width="400">
+    <img src="images/page-speed-mobile.png" alt="показатели PageSpeed для мобильных устройств" width="400">
+    <img src="images/page-speed-desktop.png" alt="показатели PageSpeed для компьютеров" width="400">
 </body>
