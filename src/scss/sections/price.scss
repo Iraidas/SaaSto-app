@@ -13,7 +13,7 @@
         left: 0;
         bottom: 150px;
         background: url('@img/Hand.png') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
     &__title {
         margin-bottom: 20px;
@@ -80,7 +80,7 @@
             right: -20px;
             top: -95px;
             background: url('@img/3D Icon.png') 0 0 no-repeat;
-            background-size: contain;
+            background-size: contain !important;
         }
         &__wrapper {
             display: flex;
@@ -193,11 +193,9 @@
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 500px) {
     .price {
         padding: 60px 0;
-        &__container::before {
-        }
         &__caption {
             margin-bottom: 20px;
         }

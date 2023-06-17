@@ -21,7 +21,7 @@
     left: 0;
     top: 30px;
     background: url('@img/Shape.png') 0 0 no-repeat;
-    background-size: 150px;
+    background-size: 150px !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -30,27 +30,27 @@
         line-height: 8vw;
     }
     .mark::after {
-        background-size: 106px;
+        background-size: 106px !important;
     }
 }
 
 @media screen and (max-width: 600px) {
     .mark::after {
-        background-size: 106px;
+        background-size: 106px !important;
         top: 27px;
     }
 }
 
 @media screen and (max-width: 520px) {
     .mark::after {
-        background-size: 106px;
+        background-size: 106px !important;
         top: 20px;
     }
 }
 
 @media screen and (max-width: 426px) {
     .mark::after {
-        background-size: 70px;
+        background-size: 70px !important;
         top: 17px;
     }
 }

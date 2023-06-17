@@ -21,7 +21,7 @@
         width: 141px;
         height: 164px;
         background: url('@img/icons/icons.svg#Vector_(23)') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
     &__container {
         display: flex;
@@ -68,9 +68,9 @@
         width: 197px;
         height: 183px;
         background: url('@img/3d_rocket (1).png') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
-    &__subtitle {
+    &__caption {
         padding-top: 20px;
         text-align: center;
         line-height: 36px;
@@ -257,7 +257,7 @@
         &::before {
             display: none;
         }
-        &__subtitle {
+        &__caption {
             padding-bottom: 40px;
         }
         &__actions-list {

@@ -9,9 +9,9 @@
         width: 84px;
         height: 134px;
         background: url('@img/icons/icons.svg#Vector') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
-    &__container {
+    .container {
         display: flex;
         height: 100vh;
         min-height: 650px;
@@ -30,7 +30,7 @@
         left: 0;
         bottom: -70vh;
         background: url('@img/Mobile Screen 1.png') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
     &__container::after {
         content: "";
@@ -40,7 +40,7 @@
         right: 0;
         bottom: -70vh;
         background: url('@img/Mobile Screen 2.png') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
     &__title {
         font-family: 'Poppins', sans-serif;
@@ -54,8 +54,8 @@
         color: #1C0E0D;
         position: relative;
         background: url('@img/Shape.png') 0 0 no-repeat;
-        background-size: 176px;
-        background-position: left bottom;
+        background-size: 176px !important;
+        background-position: left bottom !important;
         left: 0;
     }
     &__title::before {
@@ -66,7 +66,7 @@
         width: 121px;
         height: 174px;
         background: url('@img/icons/icons.svg#Vector_(2)') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
     &__title::after {
         content: "";
@@ -76,7 +76,7 @@
         width: 135px;
         height: 157px;
         background: url('@img/Alarm_Clock copy 2 (2).png') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
     &__subtitle {
         font-family: 'Inter', sans-serif;
@@ -98,7 +98,7 @@
         bottom: 0;
         left: 30%;
         background: url('@img/icons/icons.svg#Vector_(11)') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
     &__link {
         background: #FF553E;
@@ -127,7 +127,7 @@
         top: 0;
         right: -217px;
         background: url('@img/icons/icons.svg#Vector_(4)') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
         cursor: default;
     }
     &__link::before {
@@ -139,7 +139,7 @@
         height: 190px;
         right: -310px;
         background: url('@img/CLIPBOARD VERIFIED 1.png') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
         cursor: default;
     }
 }
@@ -197,7 +197,7 @@
             margin-left: 0;
             text-align: start;
             line-height: 10vw;
-            background-size: 106px;
+            background-size: 106px !important; 
         }
         &__title::after {
             display: block;
@@ -229,6 +229,10 @@
 
 @media screen and (max-width: 426px) {
     .primary {
+        .container {
+            height: auto;
+            min-height: 600px;
+        }
         &__title {
             max-width: 260px;
             font-size: 28px;
@@ -236,7 +240,7 @@
             font-weight: 700;
             text-transform: capitalize;
             line-height: 160%;
-            background-position: center 65%;
+            background-position: center 65% !important;
         }
         &__title::after {
             right: -10px;

@@ -17,7 +17,7 @@
         top: 40px;
         left: 0;
         background: url('@img/like.png') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
         z-index: 5;
     }
     &__container::after {
@@ -28,7 +28,7 @@
         top: 190px;
         left: 136px;
         background: url('@img/icons/icons.svg#Vector_(9)') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
     }
     &__title,
     &__caption {
@@ -60,10 +60,12 @@
             grid-template-columns: 1fr 1.85fr;
             max-width: 100%;;
         }
+        &__image {
+            grid-row: 1/ 4 span;
+        }
         &__picture {
             padding-right: 50px;
             grid-column: 1;
-            grid-row: 1/ 4 span;
             height: 100%;
         }
         &__caption {
@@ -97,7 +99,7 @@
         bottom: -30px;
         left: -186px;
         background: url('@img/chat.png') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
         z-index: 5;
     }
     .review::after {
@@ -108,7 +110,7 @@
         bottom: -60px;
         right: 0px;
         background: url('@img/emoji.png') 0 0 no-repeat;
-        background-size: contain;
+        background-size: contain !important;
         z-index: 5;
     }
 }
