@@ -64,6 +64,7 @@
             padding-right: 50px;
             grid-column: 1;
             grid-row: 1/ 4 span;
+            height: 100%;
         }
         &__caption {
             padding-top: 70px;
@@ -75,7 +76,6 @@
             font-size: 24px;
             line-height: 24px;
             color: #38363C;
-            padding-top: 35px;
         }
         &__position {
             font-family: 'Inter', sans-serif;
@@ -85,8 +85,8 @@
             line-height: 26px;
             color: #38363C;
             opacity: 0.7;
-            padding-top: 20px;
             position: relative;
+            margin-top: -30px;
         }
     }
     .review::before {
@@ -126,11 +126,11 @@
             &__container {
                 max-width: 700px;
                 .swiper-pagination {
-                    bottom: 80px;
                     left: -23px;
                 }
             }
             .caption {
+                padding-top: 40px;
                 font-size: 16px;
                 line-height: 26px;
             }
@@ -141,6 +141,7 @@
             &__position {
                 font-size: 14px;
                 line-height: 20px;
+                margin-top: -20px;
             }
         }
     }
@@ -168,9 +169,6 @@
                 font-size: 16px;
                 line-height: 180%;
             }
-            &__picture {
-                height: 120%;
-            }
             &__name {
                 font-size: 20px;
                 padding-top: 30px;
@@ -179,6 +177,8 @@
             &__position {
                 font-size: 16px;
                 line-height: 26px;
+                padding-top: 5px;
+                margin-top: 0;
             }
             &__pagination {
                 height: 40px;
